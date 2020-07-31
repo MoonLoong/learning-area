@@ -17,12 +17,10 @@
     <p>0</p>
 
     <script>
-        // 'use strict';
+        // 'use strict';开启严格模式，防止不规范写法
         const select = document.querySelector('select');
         const html = document.querySelector('html');
         const textP = document.querySelector('p');
-        let i = 2;
-        a = 1;
 
         select.onchange = function() {
             select.value === 'black' ? update('black', 'white', '1') : update('white', 'black', '2');
