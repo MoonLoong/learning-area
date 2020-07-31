@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Simple ternary operator example</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <label for="theme">Select theme: </label>
     <select id="theme">
       <option value="white">White</option>
@@ -12,19 +14,24 @@
     </select>
 
     <h1>This is my website</h1>
+    <p>0</p>
 
     <script>
-      const select = document.querySelector('select');
-      const html = document.querySelector('html');
+        const select = document.querySelector('select');
+        const html = document.querySelector('html');
+        const textP = document.querySelector('p');
+        let i = 2;
 
-      select.onchange = function() {
-        select.value === 'black' ? update('black','white') : update('white','black');
-      }
+        select.onchange = function() {
+            select.value === 'black' ? update('black', 'white', '1') : update('white', 'black', '2');
+        }
 
-      function update(bgColor, textColor) {
-        html.style.backgroundColor = bgColor;
-        html.style.color = textColor;
-      }
+        function update(bgColor, textColor, text) {
+            html.style.backgroundColor = bgColor;
+            html.style.color = textColor;
+            textP.textContent = text;
+        }
     </script>
-  </body>
+</body>
+
 </html>
